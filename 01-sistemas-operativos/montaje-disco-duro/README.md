@@ -1,15 +1,16 @@
 # Montaje y verificación de disco duro adicional
 
 ## Objetivo
-Instalar un HDD/SSD adicional y verificar su funcionamiento a nivel hardware, BIOS y sistema operativo.
+Instalar y configurar un HDD/SSD adicional y validar su correcto funcionamiento desde el sistema operativo.
 
 ## Tareas realizadas
-- Montaje físico en bahía
-- Conexión SATA/M.2
-- Verificación en BIOS
+- Montaje físico del disco en el chasis
+- Conexión SATA/M.2 y alimentación
 - Inicialización GPT/MBR
-- Particionado y formateo
-- Diagnóstico SMART
+- Creación de particiones
+- Formateo NTFS
+- Comprobación de errores y salud SMART
+- Pruebas de rendimiento
 
 ## Herramientas usadas
 - diskmgmt.msc
@@ -19,7 +20,7 @@ Instalar un HDD/SSD adicional y verificar su funcionamiento a nivel hardware, BI
 - HD Tune
 
 ## Resultado
-Disco detectado correctamente y sin errores.
+Disco operativo, sin sectores defectuosos ni alertas SMART.
 
 ## Documentación completa
 Ver memoria.pdf
