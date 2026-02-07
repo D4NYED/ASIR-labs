@@ -1,0 +1,3 @@
+diskmgmt.msc
+chkdsk D: /f /r
+wmic diskdrive get status
