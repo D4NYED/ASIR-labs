@@ -1,0 +1,2 @@
+7z a archivo.7z carpeta/
+7z x archivo.7z
