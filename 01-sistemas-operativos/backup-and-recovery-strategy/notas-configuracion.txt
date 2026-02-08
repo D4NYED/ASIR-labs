@@ -1,0 +1,5 @@
+Incremental: lunes-viernes 09:00
+Completa: último día del mes
+Destino: HDD externo + NAS
+Verificación: Check Image habilitado
+Restauración probada OK
