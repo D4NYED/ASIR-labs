@@ -1,0 +1,22 @@
+! Configuración de Seguridad con ACL Extendida
+enable
+configure terminal
+
+! Definir la ACL 100 (Extendida)
+! Permitir PC Administrador (Ej: 192.168.10.5) a Red Sensible
+access-list 100 permit ip host 192.168.10.5 192.168.30.0 0.0.0.255
+
+! Permitir PC Jefe (Ej: 192.168.10.6) a Red Sensible
+access-list 100 permit ip host 192.168.10.6 192.168.30.0 0.0.0.255
+
+! (Opcional) Denegar explícitamente para log (aunque existe el implícito)
+access-list 100 deny ip any any
+
+! Aplicar la ACL a la interfaz correspondiente
+interface GigabitEthernet0/1
+ description Conexion a Red Sensible
+ ip access-group 100 out
+ exit
+
+! Verificar configuración y hits
+show access-lists
