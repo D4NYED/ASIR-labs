@@ -1,0 +1,20 @@
+! Configuración Básica de Router para Segmentación
+enable
+configure terminal
+
+! Configuración Interfaz Departamento 1
+interface GigabitEthernet0/0
+ description Link to Dept_1
+ ip address 192.168.1.1 255.255.255.0
+ no shutdown
+ exit
+
+! Configuración Interfaz Departamento 2
+interface GigabitEthernet0/1
+ description Link to Dept_2
+ ip address 192.168.2.1 255.255.255.0
+ no shutdown
+ exit
+
+! Guardar cambios
+copy running-config startup-config
