@@ -1,18 +1,15 @@
-# ASIR Labs & Proyectos
+# ASIR Labs & Projects
 
-Repositorio donde documento laboratorios y prácticas técnicas del grado ASIR.
+Portfolio técnico con laboratorios prácticos de:
+- Administración Linux/Windows
+- Redes Cisco (NAT, Routing, ACLs)
+- Bases de datos SQL
+- Seguridad y hardening
 
-Este repositorio incluye:
-- Configuraciones reales de sistemas Linux/Windows
-- Scripts de automatización
-- Despliegue de servicios (Apache, redes, etc.)
-- Hardening y seguridad
-- Evidencias y documentación técnica
+Todos los proyectos incluyen:
+- Documentación técnica
+- Configuraciones reales
+- Scripts y comandos CLI
+- Evidencias de pruebas
 
-Cada práctica contiene:
-- README resumen
-- Comandos/configs/scripts
-- Capturas
-- Memoria académica (opcional)
-
-Objetivo: construir un portfolio práctico orientado a administración de sistemas y ciberseguridad.
+Objetivo: demostrar habilidades reales de Sysadmin, Networking y Ciberseguridad.
