@@ -1,0 +1,29 @@
+! Configuración de Interfaces
+interface GigabitEthernet0/0
+ ip address 10.1.0.1 255.255.255.0
+ ip nat inside
+ no shutdown
+!
+interface GigabitEthernet0/1
+ ip address 172.22.34.123 255.255.255.0
+ ip nat outside
+ no shutdown
+
+! --- NAT ESTÁTICO ---
+! Mapeo manual de IP privada a pública
+ip nat inside source static 10.1.0.2 172.22.34.124
+
+! --- NAT DINÁMICO ---
+! Definir pool de direcciones públicas
+ip nat pool MiPool 172.22.34.125 172.22.34.130 netmask 255.255.255.0
+! ACL para definir tráfico permitido
+access-list 1 permit 10.1.0.0 0.0.0.255
+! Vincular ACL al Pool
+ip nat inside source list 1 pool MiPool
+
+! --- PAT (SOBRECARGA) ---
+! Usar la IP de la interfaz WAN para todos
+ip nat inside source list 1 interface GigabitEthernet0/1 overload
+
+! Verificación
+show ip nat translations
