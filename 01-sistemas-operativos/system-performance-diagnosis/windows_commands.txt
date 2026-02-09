@@ -1,0 +1,11 @@
+# Listar procesos
+tasklist
+
+# PowerShell listar top CPU
+Get-Process | Sort-Object CPU -Descending | Select -First 10
+
+# Matar proceso
+taskkill /PID 1234 /F
+
+# Cambiar prioridad
+Get-Process notepad | % { $_.PriorityClass = "High" }
