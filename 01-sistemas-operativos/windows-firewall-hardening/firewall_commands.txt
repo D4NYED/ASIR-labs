@@ -1,0 +1,19 @@
+# Obtener IP de dominio
+nslookup x.com
+nslookup tiktok.com
+
+# Listar paquetes UWP instalados
+Get-AppxPackage
+
+# Crear regla de firewall de salida (bloqueo IP)
+New-NetFirewallRule -DisplayName "Block X" -Direction Outbound -Action Block -RemoteAddress <IP>
+
+# Crear regla para aplicación UWP
+New-NetFirewallRule -DisplayName "Block TikTok App" -Direction Outbound -Action Block -Program "<Path>"
+
+# Ver reglas activas
+Get-NetFirewallRule
+
+# Verificar conectividad
+ping x.com
+ping tiktok.com
